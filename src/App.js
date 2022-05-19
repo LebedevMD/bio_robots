@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Wallet from "./Components/Wallet/Wallet.jsx";
+import "./Styles/MainStyle.css";
+import Header from "./Components/Header/Header.jsx";
+import Title from "./Components/Title/Title.jsx"
+import {useState} from "react";
 
 function App() {
+    const [coins, setCoins] = useState(5);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header />
+        <Title number={'01'} />
+        <Wallet number={'02'} coins={coins} />
     </div>
   );
 }

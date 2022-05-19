@@ -1,0 +1,22 @@
+.Block {
+    display: flex;
+    margin-top: 120px;
+}
+
+.main_text {
+    font-size: 56px;
+    font-weight: bold;
+    height: 216px;
+    width: 450px;
+}
+
+.sub_text {
+    font-size: 1.5em;
+    color: #A3B8CC;
+    font-weight: bold;
+}
+
+.img_robots {
+    margin-right: 0;
+    margin-left: auto;
+}

@@ -1,0 +1,9 @@
+.Block {
+    display: flex;
+    margin-top: 124px;
+}
+
+.Coins {
+    padding-top: 60px;
+    padding-bottom: 24px;
+}

@@ -5,7 +5,7 @@ import Title from "./Components/Title/Title.jsx"
 import {useState} from "react";
 
 function App() {
-    const [coins, setCoins] = useState(5);
+    const [coins, setCoins] = useState(69);
 
   return (
     <div className="App">

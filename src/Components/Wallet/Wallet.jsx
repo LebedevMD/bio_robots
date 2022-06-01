@@ -8,10 +8,16 @@ const Wallet = ({number, coins}) => {
             <div className={"Counter"}>
                 <p>{number}</p>
             </div>
-            <div>
+            <div className={classes.Container_Coins}>
                 <h1>Кошелёк криптовалют</h1>
                 <div className={classes.Coins}>
                     {getCoinsImage(coins)}
+                </div>
+                <p>{coins} biorobo монет</p>
+                <div className={classes.Accumulate}>
+                    <a className={classes.Farm}>Нафармить</a>
+                    <input type="checkbox" className={classes.Farm_Checkbox}/>
+                    <label>Фармить по 5 монет</label>
                 </div>
             </div>
         </div>
@@ -22,8 +28,8 @@ const getCoinsImage = coins => {
     let content = [];
     for (let i = 0; i < coins; i++) {
         const style =  {
-            position: "relative",
-            right: i * 7 + "px",
+            position: "absolute",
+            left: i * 8,
             zIndex: coins - i
         };
         content.push(

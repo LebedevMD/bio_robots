@@ -4,6 +4,73 @@
 }
 
 .Coins {
-    padding-top: 60px;
-    padding-bottom: 24px;
+    padding: 60px 0 24px 0;
+    height: 20px;
+}
+
+.Container_Coins {
+    width: 100%;
+    position: relative;
+}
+
+.Container_Coins p {
+    color: #A3B8CC;
+    font-size: 24px;
+}
+
+.Accumulate {
+    padding-top: 44px;
+}
+
+.Farm {
+    position: relative;
+    color: #FF7F22;
+    text-decoration: none;
+    border-bottom: 1px #FF7F22 dotted;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.Farm_Checkbox {
+    margin-left: 120px;
+    z-index: -1;
+    opacity: 0;
+}
+
+.Farm_Checkbox:checked+label::before {
+     border-color: #A3B8CC;
+     background-image: url("./Checked.svg");
+}
+
+.Farm_Checkbox:active+label::before {
+    border-color: #A3B8CC;
+    background-image: url("./Checked.svg");
+}
+
+.Farm_Checkbox:disabled+label::before {
+     border-color: #4C5865;
+     background-image: none;
+     cursor: default;
+ }
+
+.Farm_Checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.Farm_Checkbox+label::before {
+     content: '';
+     width: 24px;
+     height: 24px;
+     border: 3px solid #A3B8CC;
+     margin-right: 12px;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: 70%;
+}
+
+.Farm_Checkbox+label:hover::before {
+     border-color: #4C5865;
 }

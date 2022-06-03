@@ -1,8 +1,21 @@
 import React from 'react';
 import classes from "./Wallet.module.css";
 import coin from "./Coin.svg"
+import {useState} from "react";
 
-const Wallet = ({number, coins}) => {
+const Wallet = ({number, coins, setCoins}) => {
+
+    const [isFarm5, setIsFarm5] = useState(false)
+
+    const changeIsFarm5 = () => {
+        setIsFarm5(!isFarm5);
+    }
+
+    const addSomeCoins = () => {
+        if(isFarm5) setCoins(coins + 5);
+        else        setCoins(coins + 1);
+    }
+
     return (
         <div className={classes.Block}>
             <div className={"Counter"}>
@@ -15,9 +28,21 @@ const Wallet = ({number, coins}) => {
                 </div>
                 <p>{coins} biorobo монет</p>
                 <div className={classes.Accumulate}>
-                    <a className={classes.Farm}>Нафармить</a>
-                    <input type="checkbox" className={classes.Farm_Checkbox}/>
-                    <label>Фармить по 5 монет</label>
+                    <a
+                        className={classes.Farm}
+                        onClick={event => addSomeCoins()}
+                    >
+                        Нафармить
+                    </a>
+                    <input
+                        type='checkbox'
+                        className={classes.Farm_Checkbox}
+                        id="isFarm5Coins"
+                        value="Farm5"
+                        checked={isFarm5}
+                        onChange={event => changeIsFarm5()}
+                    />
+                    <label htmlFor="isFarm5Coins">Фармить по 5 монет</label>
                 </div>
             </div>
         </div>

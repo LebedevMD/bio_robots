@@ -29,6 +29,7 @@
     border-bottom: 1px #FF7F22 dotted;
     bottom: 0;
     cursor: pointer;
+    user-select: none;
 }
 
 .Farm_Checkbox {
@@ -39,19 +40,19 @@
 
 .Farm_Checkbox:checked+label::before {
      border-color: #A3B8CC;
-     background-image: url("./Checked.svg");
+     background-image: url("Checked.svg");
 }
 
 .Farm_Checkbox:active+label::before {
-    border-color: #A3B8CC;
-    background-image: url("./Checked.svg");
+     border-color: #A3B8CC;
+     background-image: url("Checked.svg");
 }
 
 .Farm_Checkbox:disabled+label::before {
      border-color: #4C5865;
      background-image: none;
      cursor: default;
- }
+}
 
 .Farm_Checkbox+label {
     display: inline-flex;
